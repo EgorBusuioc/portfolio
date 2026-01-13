@@ -4,358 +4,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Busuioc Egor Portfolio</title>
-    <link rel="shortcut icon" href="images/portfolio.png" />
+    <title>Egor Busuioc Portfolio</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png"/>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/button.css">
-    <script src="https://kit.fontawesome.com/3cf6f92261.js" crossorigin="anonymous"></script>
+
+    <link rel="preload"
+          href="./fonts/SpaceGrotesk-Light.ttf"
+          as="font"
+          type="font/ttf"
+          crossorigin="anonymous">
+
+    <link rel="preload"
+          href="./fonts/SpaceGrotesk-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+
     <script defer src="./javascript/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+
+    <script src="./javascript/animation.js"></script>
+
+    <script src="https://kit.fontawesome.com/3cf6f92261.js" crossorigin="anonymous"></script>
 </head>
 
-<body id="home">
-    <main>
-        <header class="header-container">
-            <div class="logo-container">
-                <h1 class="home"></h1>
+<body>
+<section class="hero-section">
+    <canvas id="particles"></canvas>
+    <div class="container">
+        <nav class="navigation">
+            <div class="nav-container">
+                <a class="nav-hero">Egor Busuioc</a>
+                <ul class="nav-menu">
+                    <li><a href="https://github.com/EgorBusuioc" target="_blank">github</a></li>
+                    <li><a href="documents/Egor%20Busuioc%20-%20CV.pdf" target="_blank">resume</a></li>
+                </ul>
             </div>
-            <nav class="nav-container open-nav">
-                <li><a href="https://github.com/EgorBusuioc" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/egor-busuioc/" target="_blank"><i
-                            class="fa fa-linkedin-square"></i></a></li>
-                <li><a class="inst" href="mailto:busuiocegor+portfolio@gmail.com" target="_blank"><i
-                            class="fa fa-envelope"></i></a>
-                </li>
-                <li><a class="inst" href="https://www.instagram.com/personal_id_eguar/" target="_blank"><i
-                            class="fa fa-instagram"></i></a></li>
-                <li><a href="./documents/Egor Busuioc - CV.pdf" target="_blank"><i class="fa fa-briefcase"></i></a></li>
-            </nav>
-            <nav class="nav-container hidden-nav">
-                <li><a href="https://github.com/EgorBusuioc" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/egor-busuioc/" target="_blank"><i
-                            class="fa fa-linkedin-square"></i></a></li>
-                <li><a href="./documents/Egor Busuioc - CV.pdf" target="_blank"><i class="fa fa-briefcase"></i></a></li>
-            </nav>
-        </header>
-        <section class="intro-section-container">
-            <div class="intro-container hidden-left">
-                <div class="intro-left hidden-left">
-                    <div class="text-container">
-                        <p class="hello-label">Hello, my name is</p>
-                        <p class="name-label" id="name-label">Busuioc Egor</p>
-                        <p class="job-label">A computer engineering student </p>
-                        <p class="job-label">proficient in modern technologies.</p>
-                    </div>
-                </div>
-            </div>
-            <div id="lottie-animation"></div>
-        </section>
-        <section class="stack-container">
-            <p class="stack-title">Tech Stack Overview</p>
-            <div class="technologies-stack-container">
-                <div class="hidden-left">
-                    <img class="img" src="./images/icons8-spring-boot.svg" alt="SVG Icon">
-                </div>
-                <div class="techo-stack-container hidden-right">
-                    <p class="stack-elem">Spring Boot</p>
-                    <p class="stack-elem">Spring Data JPA</p>
-                    <p class="stack-elem">JDBC</p>
-                    <p class="stack-elem">PostgreSQL</p>
-                    <p class="stack-elem">MySQL</p>
-                    <p class="stack-elem">Redis</p>
-                    <p class="stack-elem">JWT auth/refresh</p>
-                    <p class="stack-elem">Spring Security</p>
-                    <p class="stack-elem">gRPC</p>
-                    <p class="stack-elem">RESTful Api</p>
-                    <p class="stack-elem">Kafka</p>
-                    <p class="stack-elem">Spring Email</p>
-                    <p class="stack-elem">Networking</p>
-                    <p class="stack-elem">Docker</p>
-                    <p class="stack-elem">Kubernetes</p>
-                    <p class="stack-elem">Angular</p>
-                </div>
-            </div>
-        </section>
-        <section class="projects-container" id="projects">
-            <div class="project-label-container">
-                <p class="stack-title">Featured Projects</p>
-            </div>
-            <div class="project">
-                <div class="description hidden-left">
-                    <div class="project-title">
-                        <div class="title-text">A multifunctional digital platform for residents of the federal state of
-                            Hessen, providing access to a wide range of public services such as civil signatures,
-                            certificate requests, and property registration. Built using Java Spring Boot and a
-                            microservice architecture.</div>
-                        <div class="project-name" style="margin-bottom: 5vh;">Project Name: HessenLand</div>
-                    </div>
-                    <div class="technologies-user" style="margin-bottom: 5vh;">
-                        <div class="project-name">Technology Stack:</div>
-                        <div>Java, Spring Boot, Multiple PostgreSQL instances, Apache Kafka, Spring Security, JWT,
-                            Email confirmation, Eureka, API Gateway, AES Encryption, Docker.</div>
-                    </div>
-                    <div class="project-description">
-                        <div class="project-name">Implemented Microservices:</div>
-                        <div class="title-text">Gateway Service:</div>
-                        Handles request routing and verifies JWT tokens before passing requests to backend services.
+        </nav>
 
-                        <div class="title-text">Auth Service:</div>
-                        Manages user registration, authentication, and token issuance.
-                        Stores only email and password; other data is sent via Kafka to the user service.
-                        Sends activation emails and processes password recovery.
-
-                        <div class="title-text">Notification Service:</div>
-                        Sends email notifications, including activation and recovery messages.
-                        Communicates via Kafka only and does not expose public HTTP endpoints.
-
-                        <div class="title-text">User Service:</div>
-                        Handles management of citizen and registrar profiles.
-                        Stores encrypted user data and allows registrars to verify new users.
-
-                        <div class="project-name">Future Enhancements:</div>
-                        Integration of a machine learning model to provide personalized government service suggestions.
-
-                        Use of Redis to cache responses from the ML service.
-
-                        Communication between Java and Python components using gRPC.
-                    </div>
-                </div>
-                <button style="margin: auto;" id="github-button" target="_blank"
-                    href="https://github.com/EgorBusuioc/hessen_land">Go To GitHub Project!</button>
-            </div>
-        </section>
-        <section class="education-container" id="education">
-            <div class="education-title-container">
-                <p class="education-title-main">Education</p>
-                <div class="education-sub"></div>
-            </div>
-            <div class="education-grid">
-                <div class="education-card hidden-left">
-                    <div class="education-basic">
-                        <div class="education-title-container">
-                            <p class="education-title">Hochschule Fulda</p>
-                            <p class="education-role">M.Sc. Global Software Development</p>
-                            <p class="education-location">Fulda, Germany</p>
-                        </div>
-                        <a href="https://www.hs-fulda.de/" target="_blank" class="styled-link">Hochschule Fulda -
-                            Link</a>
-                    </div>
-                    <div class="education-spec">
-                        <p class="education-duration">October 2024 - August 2026</p>
-                        <p class="education-gpa">Grade: In Process</p>
-                    </div>
-                </div>
-                <div class="education-card hidden-left">
-                    <div class="education-basic">
-                        <div class="education-title-container">
-                            <p class="education-title">Moldova State University</p>
-                            <p class="education-role">B.Sc. Computer Science - Head of Group</p>
-                            <p class="education-location">Chisinau, Moldova</p>
-                        </div>
-                        <a href="https://usm.md/?lang=en" target="_blank" class="styled-link">Moldova State University -
-                            Link</a>
-                    </div>
-                    <div class="education-spec">
-                        <p class="education-duration">08/2020 - 05/2024</p>
-                        <p class="education-gpa">
-                            Grade: 1.4
-                        </p>
-                    </div>
-                </div>
-                <div class="education-card hidden-left">
-                    <div class="education-basic">
-                        <div class="education-title-container">
-                            <p class="education-title">High-school “Dimitrie Cantemir”</p>
-                            <p class="education-role">Emphasis on real-world sciences</p>
-                            <p class="education-location">Chisinau, Moldova</p>
-                        </div>
-                        <a href="https://ltdcantemir.educ.md/ro/" target="_blank" class="styled-link">Liceul Teoretic
-                            Dimitrie Cantemir - Link</a>
-                    </div>
-                    <div class="education-spec">
-                        <p class="education-duration">08/2020 - 05/2024</p>
-                        <p class="education-gpa">
-                            Grade: 2.3
-                        </p>
-                    </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hey, I'm <a class="hero">Egor Busuioc</a><br>
+                a computer engineering student.<br><br>
+                <a class="hero-text" data-splitting>Building the future with code.</a>
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="section-with-fixed-bg">
+    <canvas id="noise"></canvas>
+    <div class="introduction">
+        <div class="about-me">
+            <h2 class="heading">WHO AM I?</h2>
+            <p class="about-me-text">Student, developer, problem-solver. <br>
+                Currently turning coffee into code at <a href="https://www.hs-fulda.de/" class="hs-link" target="_blank">Hochschule
+                    Fulda.</a><br>
+                I am a full-stack developer based in Germany with a passion for creating efficient and innovative
+                software solutions.<br>
+                I love innovation, simplicity and efficiency.<br><br>
+                <a class="hs-link" style="cursor: default">Always learner, always coder.</a>
+            </p>
+        </div>
+        <div class="tech-stack">
+            <h2 class="heading">MY TECH STACK</h2>
+            <div class="glass-box">
+                <div class="word-box">
+                    <span id="word" class="word"></span>
                 </div>
             </div>
-        </section>
-        <section class="achievements-container" id="achievements">
-            <div class="education-title-container">
-                <p class="education-title-main">Internships and Achievements</p>
-                <div class="education-sub"></div>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card hidden-left">
-                    <div class="achievement-container">
-                        <div class="achievement-top">
-                            <p class="achievement-title">Coherent Solutions Internship</p>
-                            <div class="border-card">
-                                <p class="achievement-date">03/2024 – 07/2024</p>
-                                <p class="achievement-author">Chisinau, Moldova</p>
-                            </div>
-                        </div>
-                        <div class="border-inner">
-                            <div class="skills-list">
-                                <div class="skill-item">
-                                    <div class="skill-title">Java & Spring:</div>
-                                    <div class="skill-description">Completed a traineeship focused on Java and the
-                                        Spring ecosystem.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Backend Development:</div>
-                                    <div class="skill-description">Built scalable and maintainable applications using
-                                        Spring Boot and MongoDB.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Spring Modules:</div>
-                                    <div class="skill-description">Worked with Spring Data JPA, Security, MVC, and
-                                        Validation to develop secure web apps.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Agile/Scrum:</div>
-                                    <div class="skill-description">Participated in sprints, stand-ups, and
-                                        retrospectives within a development team.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Debugging & Testing:</div>
-                                    <div class="skill-description">Solved real-world issues following best practices in
-                                        code structure and error handling.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <p class="about-me-text">There's always space for new knowledge.</p>
+        </div>
+    </div>
+    <div class="projects-section">
+        <h2 class="heading">MY PROJECTS</h2>
+        <div class="projects">
+            <div class="project-elem">
+                <div class="project-title">HessenLand</div>
+                <div class="project-status">In progress</div>
+                <div class="project-description">Multifunctional service for the residents of the federal state of
+                    Hessen.
                 </div>
-                <div class="achievement-card hidden-right">
-                    <div class="achievement-container">
-                        <div class="achievement-top">
-                            <p class="achievement-title">Cedacri International Internship</p>
-                            <div class="border-card">
-                                <p class="achievement-date">11/2023 – 02/2024</p>
-                                <p class="achievement-author">Chisinau, Moldova</p>
-                            </div>
-                        </div>
-                        <div class="border-inner">
-                            <div class="skills-list">
-                                <div class="skill-item">
-                                    <div class="skill-title">Technical Skills:</div>
-                                    <div class="skill-description">Successfully completed a comprehensive 80-hour
-                                        training course focused on Modern Java and Angular for application
-                                        development.
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Full-Stack Development:</div>
-                                    <div class="skill-description">Gained knowledge in back-end development with
-                                        Java
-                                        and front-end development using Angular, bridging client-server logic.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Practical Experience:</div>
-                                    <div class="skill-description">Applied theoretical concepts to real-world
-                                        scenarios
-                                        by designing, building, and deploying working applications.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Framework Proficiency:</div>
-                                    <div class="skill-description">Improved skills in modern development frameworks,
-                                        tools, and technologies essential for efficient software delivery.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-technologies">Java, Spring, Kafka, PostgreSQL, Redis, Angular, AWS, GCP, Docker
                 </div>
-                <div class="achievement-card hidden-left">
-                    <div class="achievement-container">
-                        <div class="achievement-top">
-                            <p class="achievement-title">Endava Internship</p>
-                            <div class="border-card">
-                                <p class="achievement-date">09/2023 – 12/2023</p>
-                                <p class="achievement-author">Chisinau, Moldova</p>
-                            </div>
-                        </div>
-                        <div class="border-inner">
-                            <div class="skills-list">
-                                <div class="skill-item">
-                                    <div class="skill-title">Technical Knowledge:</div>
-                                    <div class="skill-description">Successfully completed a two-month training program
-                                        focused on mastering Java and essential tools including Git, SQL, Maven, Spring
-                                        Framework, and Unit Testing.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Practical Skills:</div>
-                                    <div class="skill-description">Gained hands-on experience through real-world
-                                        projects, developing efficient and scalable software solutions.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Tool Proficiency:</div>
-                                    <div class="skill-description">Improved skills with tools like Git for version
-                                        control, SQL for databases, Maven for automation, and Spring for backend
-                                        development.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Problem-Solving Skills:</div>
-                                    <div class="skill-description">Strengthened problem-solving by applying unit testing
-                                        strategies to ensure software quality and reliability.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="achievement-card hidden-right">
-                    <div class="achievement-container">
-                        <div class="achievement-top">
-                            <p class="achievement-title">Ultra Moldova Internship</p>
-                            <div class="border-card">
-                                <p class="achievement-date">05/2023 – 08/2023</p>
-                                <p class="achievement-author">Chisinau, Moldova</p>
-                            </div>
-                        </div>
-                        <div class="border-inner">
-                            <div class="skills-list">
-                                <div class="skill-item">
-                                    <div class="skill-title">Infrastructure as Code (IaC):</div>
-                                    <div class="skill-description">Gained hands-on experience with Terraform to
-                                        provision, configure, and manage infrastructure reproducibly and scalably.</div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Containerization & Orchestration:</div>
-                                    <div class="skill-description">Worked with Docker to containerize applications and
-                                        explored Kubernetes for microservices orchestration in development and testing.
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Cloud Platforms:</div>
-                                    <div class="skill-description">Acquired foundational knowledge of AWS, Azure, and
-                                        GCP, including resource deployment, basic networking, monitoring, and storage.
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <div class="skill-title">Networking & Routing Fundamentals:</div>
-                                    <div class="skill-description">Built a strong understanding of network protocols,
-                                        subnetting, and DNS basics.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="project-link">
+                    <a href="https://github.com/EgorBusuioc/hessen-land" class="btn-link" target="_blank">View Project →</a>
                 </div>
             </div>
-        </section>
+            <div class="project-elem">
+                <div class="project-title">FuldaConnect</div>
+                <div class="project-status">In progress</div>
+                <div class="project-description">University Project - A comprehensive solution for our university.</div>
+                <div class="project-technologies">Python, FastAPI, React, PostgreSQL, AWS, Docker</div>
+                <div class="project-link">
+                    <a class="btn-link">Unavailable</a>
+                </div>
+            </div>
+            <div class="project-elem">
+                <div class="project-title">IETEC CDC</div>
+                <div class="project-status">Complete</div>
+                <div class="project-description">University Project - Change Data Capture system for a Fulda-based
+                    company.
+                </div>
+                <div class="project-technologies">Java, Spring, PostgreSQL, OpenStack Private Cloud, Docker</div>
+                <div class="project-link">
+                    <a class="btn-link">Unavailable</a>
+                </div>
+            </div>
+            <div class="project-elem">
+                <div class="project-title">BikeShop</div>
+                <div class="project-status">Complete</div>
+                <div class="project-description">Modern online bike shop with intelligent recommendations based on
+                    terrain and location.
+                </div>
+                <div class="project-technologies">Java, Spring, PostgreSQL, GCP, GSAP</div>
+                <div class="project-link">
+                    <a href="https://github.com/EgorBusuioc/BikeShop" class="btn-link" target="_blank">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="professional-section">
+        <h2 class="heading prof">PROFESSIONAL EXPERIENCE</h2>
 
-        <footer class="footer">
-            <div class="footer-helper"></div>
-            <div class="footer-container">
-                <div class="title">Languages</div>
-                <div class="title-elem hidden-left">English - C1</div>
-                <div class="title-elem hidden-left">German - A2.1 (currently improving)</div>
-                <div class="title-elem hidden-left">Romanian - B2</div>
-                <div class="title-elem hidden-left">Russian - Native Speaker</div>
-                <div class="ref-link"><a href="https://www.flaticon.com/free-icons/portfolio"
-                        title="portfolio icons">Portfolio icons created by Freepik - Flaticon</a></div>
+        <div class="professional-section-cards">
+            <div class="project-elem exp">
+                <div class="project-title">Coherent Solutions</div>
+                <div class="project-status">Internship</div>
+                <div class="project-description">Completed a comprehensive internship focused on Java and Spring ecosystem.  Built scalable applications using Spring Boot and MongoDB, worked with Spring Data JPA, Security, MVC, and Validation.  Participated in Agile/Scrum development cycle with sprints and stand-ups, while solving real-world issues following best practices.
+                </div>
+                <div class="date">03/2024 – 07/2024</div>
+                <div class="location">Chisinau, Moldova</div>
             </div>
-        </footer>
-    </main>
+            <div class="project-elem exp">
+                <div class="project-title">Cedacri International</div>
+                <div class="project-status">Internship</div>
+                <div class="project-description">Successfully completed an 80-hour internship in Modern Java and Angular development. Gained full-stack expertise in backend development with Java and frontend with Angular, bridging client-server logic. Applied theoretical concepts to real-world scenarios by designing, building, and deploying working applications.
+                </div>
+                <div class="location">Chisinau, Moldova</div>
+                <div class="date">11/2023 – 02/2024</div>
+            </div>
+            <div class="project-elem exp">
+                <div class="project-title">Endava</div>
+                <div class="project-status">Internship</div>
+                <div class="project-description">Completed a two-month intensive training program mastering Java and essential tools including Git, SQL, Maven, Spring Framework, and Unit Testing. Gained hands-on experience through real-world projects, developing efficient and scalable software solutions while strengthening problem-solving skills through comprehensive testing strategies.
+
+                </div>
+                <div class="location">Chisinau, Moldova</div>
+                <div class="date">09/2023 – 12/2023</div>
+            </div>
+            <div class="project-elem exp">
+                <div class="project-title">ULTRA Moldova</div>
+                <div class="project-status">Internship</div>
+                <div class="project-description">Gained hands-on experience with Infrastructure as Code using Terraform. Worked with Docker for containerization and explored Kubernetes for microservices orchestration. Acquired foundational knowledge of AWS, Azure, and GCP, including resource deployment, networking, and storage, while building strong understanding of network protocols and DNS.
+
+                </div>
+                <div class="location">Chisinau, Moldova</div>
+                <div class="date">05/2023 – 08/2023</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="education-section">
+        <h2 class="heading">EDUCATION</h2>
+        <div class="education-cards">
+            <div class="education-card">
+                <a class="institution-name hs-link" href="https://www.hs-fulda.de/" target="_blank">Hochschule Fulda</a>
+                <h3 class="degree">M.Sc. Global Software Development</h3>
+                <p class="location-education">Fulda, Germany</p>
+                <p class="period">10/2024 - 03/2027</p>
+                <span class="grade">Grade: 2.0</span>
+            </div>
+            <div class="education-card">
+                <a class="institution-name hs-link" href="https://usm.md/?lang=en" target="_blank">Moldova State University</a>
+                <h3 class="degree">B.Sc. Computer Science - Head of Group</h3>
+                <p class="location-education">Chisinau, Moldova</p>
+                <p class="period">08/2020 - 05/2024</p>
+                <span class="grade">Grade: 1.4</span>
+            </div>
+            <div class="education-card">
+                <a class="institution-name hs-link" href="https://ltdcantemir.md/" target="_blank">Theoretical Lyceum “Dimitrie Cantemir”</a>
+                <h3 class="degree">Emphasis on real-world sciences</h3>
+                <p class="location-education">Chisinau, Moldova</p>
+                <p class="period">08/2020 - 05/2024</p>
+                <span class="grade">Grade: 2.3</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <h1 class="footer-heading" data-hover="Nobody can do it like I do">Egor Busuioc</h1>
+            <div class="connect-links">
+                <h1 class="footer-heading">Connect</h1>
+                <a href="https://github.com/EgorBusuioc" class="connect-link" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:busuiocegor@gmail.com" class="connect-link" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/egor-busuioc/" class="connect-link" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+        <p class="rights">© 2026 Egor Busuioc. All rights reserved.</p>
+    </div>
+</section>
+<div class="custom-cursor"></div>
+<div class="cursor-hint">SCROLL OR CLICK</div>
 </body>
-
 </html>
+
+<script>
+    // ======== PARTICLES CANVAS ========
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    function getParticleCount() {
+        const width = window.innerWidth;
+
+        if (width < 480) {
+            return 100;
+        } else if (width < 768) {
+            return 150;
+        } else if (width < 1024) {
+            return 250;
+        } else {
+            return 350;
+        }
+    }
+
+
+    const particles = [];
+    const particleCount = getParticleCount();
+    const colors = ['rgba(255, 255, 255, 0.6)', '#66FCF1'];
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: 1.5 + Math.random(),
+            dx: (Math.random() - 0.5) * 0.5,
+            dy: (Math.random() - 0.5) * 0.5,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            opacity: 0.3 + Math.random() * 0.7
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+            particle.x += particle.dx;
+            particle.y += particle.dy;
+
+            if (particle.x < 0 || particle.x > canvas.width) particle.dx = -particle.dx;
+            if (particle.y < 0 || particle.y > canvas.height) particle.dy = -particle.dy;
+
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            ctx.fillStyle = particle.color;
+            ctx.globalAlpha = particle.opacity;
+            ctx.fill();
+            ctx.globalAlpha = 1;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    const noise = () => {
+        let canvas, ctx;
+        let wWidth, wHeight;
+        let noiseData = [];
+        let frame = 0;
+        let loopTimeout;
+
+        const createNoise = () => {
+            const idata = ctx.createImageData(wWidth, wHeight);
+            const buffer32 = new Uint32Array(idata.data.buffer);
+            const len = buffer32.length;
+            for (let i = 0; i < len; i++) {
+                if (Math.random() < 0.1) {
+                    buffer32[i] = 0xff000000;
+                }
+            }
+            noiseData.push(idata);
+        };
+        const paintNoise = () => {
+            if (frame === 9) {
+                frame = 0;
+            } else {
+                frame++;
+            }
+            ctx.putImageData(noiseData[frame], 0, 0);
+        };
+
+        const loop = () => {
+            paintNoise(frame);
+            loopTimeout = window.setTimeout(() => {
+                window.requestAnimationFrame(loop);
+            }, (1000 / 25));
+        };
+
+        const setup = () => {
+            wWidth = window.innerWidth;
+            wHeight = window.innerHeight;
+            canvas.width = wWidth;
+            canvas.height = wHeight;
+            for (let i = 0; i < 10; i++) {
+                createNoise();
+            }
+            loop();
+        };
+
+        let resizeThrottle;
+        const reset = () => {
+            window.addEventListener('resize', () => {
+                window.clearTimeout(resizeThrottle);
+                resizeThrottle = window.setTimeout(() => {
+                    window.clearTimeout(loopTimeout);
+                    setup();
+                }, 200);
+            }, false);
+        };
+
+        const init = (() => {
+            canvas = document.getElementById('noise');
+            ctx = canvas.getContext('2d');
+            setup();
+        })();
+    };
+    noise();
+</script>
