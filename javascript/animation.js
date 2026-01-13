@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         animate();
 
-        const interactiveElements = document. querySelectorAll('a, button, input, textarea');
+        const interactiveElements = document.querySelectorAll('a, button, input, textarea');
 
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
@@ -161,20 +161,6 @@ window.addEventListener('DOMContentLoaded', () => {
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: card,
-                start: 'top 80%',
-                toggleActions: 'play none none none'
-            }
-        });
-    });
-
-    gsap.utils.toArray('.project-elem').forEach((project) => {
-        gsap.from(project, {
-            opacity: 0,
-            y: -50,
-            duration: 1,
-            ease: 'power2.out',
-            scrollTrigger:  {
-                trigger: project,
                 start: 'top 80%',
                 toggleActions: 'play none none none'
             }
