@@ -218,7 +218,6 @@ body {
     color: white;
     text-align: center;
     line-height: 1.11;
-    margin-bottom: 100px;
     letter-spacing: -0.1rem;
 }
 
@@ -742,7 +741,7 @@ body {
 
 @media (max-width: 1280px) {
     :root {
-        --nav-height: 140px;
+        --nav-height: 130px;
         --navigation-height: 55px;
         --nav-paddings: 30px;
         --nav-container-paddings: 40px;
@@ -862,7 +861,7 @@ body {
 
 @media (max-width: 640px) {
     :root {
-        --nav-height: 140px;
+        --nav-height: 90px;
         --navigation-height: 55px;
         --nav-paddings: 10px;
         --nav-container-paddings: 40px;
